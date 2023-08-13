@@ -11,21 +11,27 @@ endsnippet
 
 snippet tstruct
 typedef struct _$1 {
-    $2
+	$2
 } $1;
 endsnippet
 
 snippet maina
 int main(int argc, char **argv)
 {
-    $1
+	$1
 }
+endsnippet
+
+snippet enum "Enum"
+enum ${1:name} {
+	${2:/* data */}
+}; /* enum $1 */
 endsnippet
 
 snippet main
 int main(void)
 {
-    $1
+	$1
 }
 endsnippet
 
@@ -40,18 +46,18 @@ endsnippet
 
 snippet fori
 for (int i = $1; i < $2; ++i) {
-    $3
+	$3
 }
 endsnippet
 
 snippet for
 for ($1; $2; $3) {
-    $4
+	$4
 }
 endsnippet
 
 snippet inc<
-#include <$1.h>
+#include <${1:stdio}.h>
 endsnippet
 
 snippet incq
@@ -68,14 +74,14 @@ endsnippet
 
 snippet switch
 switch ($1) {
-    $2
+	$2
 }
 endsnippet
 
 snippet casec
 case ${1:0}: {
-    $2
-    break;
+	$2
+	break;
 }
 endsnippet
 
@@ -84,7 +90,7 @@ case ${1:0}: $2 break;
 endsnippet
 
 snippet printfa
-printf("$1", $2);
+printf("$1", ${2:variable});
 endsnippet
 
 snippet DEF
@@ -93,16 +99,16 @@ endsnippet
 
 snippet /*
 /* $1
- */
+*/
 endsnippet
 
 snippet /*v
 /* $1 */
 endsnippet
 
-snippet }elseif
-} else if($1) {
-    $2
+snippet }elif
+} else if($1:condition) {
+	$2
 }
 endsnippet
 
@@ -112,7 +118,7 @@ endsnippet
 
 snippet ifstrcmp0
 if ( strcmp($1, $2) == 0 ) {
-    $3
+	$3
 }
 endsnippet
 
@@ -123,19 +129,19 @@ endsnippet
 
 snippet ifstrcmpl0
 if(strcmp($1, "$2") == 0){
-    $3
+	$3
 }
 endsnippet
 
 snippet chararr
 char $1[] = {
-    $3,
+	$3,
 };
 endsnippet
 
 snippet do
 do {
-    $3
+	$3
 }while($2);
 endsnippet
 
@@ -145,8 +151,8 @@ endsnippet
 
 snippet default
 default: {
-    $1
-    break;
+	$1
+	break;
 }$2
 endsnippet
 
@@ -160,8 +166,108 @@ endsnippet
 
 
 snippet func
-${1:void} $2($3)
+${1:void} ${2:function_name}(${3:variables})
+{
+	$5
+}
+endsnippet
+
+snippet vfunc
+void ${2:function_name}($2)
+	$3
+{
 	$4
+}
+endsnippet
+
+snippet ifunc
+int ${2:function_name}($2)
+	$3
+{
+	$4
+}
+endsnippet
+
+snippet ui8func
+uint8_t ${2:function_name}($3)
+{
+	$6
+}
+endsnippet
+
+snippet ui16func
+uint16_t ${2:function_name}($3)
+{
+	$6
+}
+endsnippet
+
+snippet ui32func
+uint32_t ${2:function_name}($3)
+{
+	$6
+}
+endsnippet
+
+snippet ui64func
+uint64_t ${2:function_name}($3)
+{
+	$6
+}
+endsnippet
+
+snippet vpfunc
+void * ${2:function_name}($2)
+	$3
+{
+	$4
+}
+endsnippet
+
+snippet cfunc
+char $2($3)
+{
+	$6
+}
+endsnippet
+
+snippet cpfunc
+char * $2($3)
+{
+	$6
+}
+endsnippet
+
+snippet ipfunc
+int * $2($3)
+{
+	$6
+}
+endsnippet
+
+snippet ui8pfunc
+uint8_t * ${2:function_name}($3)
+{
+	$6
+}
+endsnippet
+
+snippet ui16pfunc
+uint16_t * ${2:function_name}($3)
+{
+	$6
+}
+endsnippet
+
+snippet ui32pfunc
+uint32_t * ${2:function_name}($3)
+{
+	$6
+}
+endsnippet
+
+snippet ui64pfunc
+uint64_t * ${2:function_name}($3)
 {
 	$6
 }
@@ -169,7 +275,7 @@ endsnippet
 
 snippet while
 while ($1) {
-    $2
+	$2
 }
 endsnippet
 
@@ -183,11 +289,39 @@ snippet #if
 endsnippet
 
 snippet if
-if ( $1 ) {
-    $2
+if ($1) {
+	$2
 }
 endsnippet
 
-# snippet *p
-# ($1);
-# endsnippet
+snippet luaclib
+#include <lua.h>
+#include <lauxlib.h>
+
+// array of functions to be use in lua
+// element format: {char * lua_function_name, int (*lua_function) (lua_State*)}
+__declspec(dllexport) luaL_Reg $1[] = {
+	{NULL, NULL}
+};
+
+__declspec(dllexport) int luaopen_$2(lua_State *L)
+{
+	luaL_newlib(L, mylib);
+	return 1;
+}
+endsnippet
+
+snippet fdlle
+__declspec(dllexport) $1:void $2($3)
+{
+	$4
+}
+endsnippet
+
+snippet flua
+int l_${1:function_name}(lua_State *L)
+{
+	$3
+	return $2;
+}
+endsnippet
