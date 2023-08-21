@@ -58,5 +58,7 @@ require'nvim-treesitter.configs'.setup {
 }
 
 vim.cmd[[
-au BufEnter,BufNewFile,BufRead *.h TSBufDisable highlight
+au BufEnter,BufNewFile,BufRead *.h set filetype=c
+au BufEnter,BufNewFile,BufRead *.cpp TSBufDisable highlight
+au BufEnter,BufNewFile,BufRead *.chh TSBufDisable highlight
 ]]

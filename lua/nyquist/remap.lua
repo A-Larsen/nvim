@@ -55,6 +55,10 @@ vim.keymap.set("v", "K", "<cmd>m '<-2<CR>gv=gv")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- buffer
+vim.keymap.set("n", "<c-b>p", "<cmd>bp<cr>")
+vim.keymap.set("n", "<c-b>n", "<cmd>bn<cr>")
+
 
 -- makes the current file executable and runs the file
 vim.keymap.set("n", "<leader>x", "<cmd>python %<cr>")

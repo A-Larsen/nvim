@@ -11,8 +11,8 @@ vim.opt.relativenumber = true
 vim.opt.showtabline = 2
 vim.opt.number = true
 vim.opt.foldcolumn = "1"
-vim.opt.tabstop = 4 
-vim.opt.softtabstop=0 
+vim.opt.tabstop = 4
+vim.opt.softtabstop= 0
 vim.opt.expandtab = true
 vim.opt.shiftwidth=4
 vim.opt.smarttab = true
@@ -38,6 +38,6 @@ noremap <silent> <C-=> :call AdjustFontSize(1)<CR><c-w>=
 noremap <silent> <C--> :call AdjustFontSize(-1)<CR><c-w>=
 inoremap <silent> <C-+> <Esc>:call AdjustFontSize(1)<CR><c-w>=a
 inoremap <silent> <C--> <Esc>:call AdjustFontSize(-1)<CR><c-w>=a
-inoremap <silent> <C-0> <Esc>:call SetFontSize(12)<cr><c-w>=a
-nnoremap <silent> <C-0> :call SetFontSize(12)<cr><c-w>=
+inoremap <silent> <C-0> <Esc>:call SetFontSize(10)<cr><c-w>=a
+nnoremap <silent> <C-0> :call SetFontSize(10)<cr><c-w>=
 ]]

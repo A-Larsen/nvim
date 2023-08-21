@@ -15,6 +15,12 @@ typedef struct _$1 {
 } $1;
 endsnippet
 
+snippet tenum
+typedef enum _$1 {
+	$2
+} $1;
+endsnippet
+
 snippet maina
 int main(int argc, char **argv)
 {
@@ -78,8 +84,9 @@ switch ($1) {
 }
 endsnippet
 
-snippet casec
-case ${1:0}: {
+snippet case
+case ${1:0}: 
+{
 	$2
 	break;
 }
@@ -325,3 +332,8 @@ int l_${1:function_name}(lua_State *L)
 	return $2;
 }
 endsnippet
+
+snippet memset
+memset(&$1, ${2:0}, ${3:sizeof($4)});
+endsnippet
+
