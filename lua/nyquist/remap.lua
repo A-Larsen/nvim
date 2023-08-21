@@ -56,8 +56,9 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- buffer
-vim.keymap.set("n", "<c-b>p", "<cmd>bp<cr>")
-vim.keymap.set("n", "<c-b>n", "<cmd>bn<cr>")
+vim.keymap.set("n", "<c-b>p", "<cmd>bp<cr>") -- buffer previous
+vim.keymap.set("n", "<c-b>n", "<cmd>bn<cr>") -- buffer next
+vim.keymap.set("n", "<c-b>n", "<cmd>%bd|e#<cr>") -- delete all buffers
 
 
 -- makes the current file executable and runs the file
