@@ -38,6 +38,8 @@ function CallDevTerm()
     hor bot split
     resize 15
     term "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2022\Visual Studio Tools\Developer PowerShell for VS 2022.lnk"
+    " this makes sure that this buffer isn't included in the buffer list
+    set nobl
 endfunction
 
 noremap <silent> <C-=> :call AdjustFontSize(1)<CR><c-w>=
