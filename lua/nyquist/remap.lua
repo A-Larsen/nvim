@@ -32,7 +32,7 @@ vim.keymap.set("n", "<leader>W", "<cmd>w!<CR>")
 vim.keymap.set("v", "<c-c>", "\"+y | call system('xclip -selection clipboard -i', @0)")
 
 -- run test programs
-vim.keymap.set("n", "<leader>rt", ":bel split | set norelativenumber | set nonumber | term runtst %:p:h<CR> | :normal Gi<CR>")
+-- vim.keymap.set("n", "<leader>rt", ":bel split | set norelativenumber | set nonumber | term runtst %:p:h<CR> | :normal Gi<CR>")
 
 -- quick search and replace
 vim.keymap.set("n", "<leader>s", "ye*Ncgn")
@@ -58,10 +58,14 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- buffer
 vim.keymap.set("n", "<c-b>p", "<cmd>bp<cr>") -- buffer previous
 vim.keymap.set("n", "<c-b>n", "<cmd>bn<cr>") -- buffer next
-vim.keymap.set("n", "<c-b>da", "<cmd>%bd|e#<cr>") -- delete all buffers
-vim.keymap.set("n", "<c-b>dd", "<cmd>bd<cr>") -- delete current buffer
+vim.keymap.set("n", "<c-b>c", "<cmd>%bd|e#<cr>") -- delete all buffers
+vim.keymap.set("n", "<c-b>d", "<cmd>bd<cr>") -- delete current buffer
 vim.keymap.set("n", "<c-b>i", "<cmd>set nobl<cr>") -- don't show this in buffer list
+-- doing :b and then tying in a string and then tab will show you a
+-- list of buffers that have the string
+-- ls will show you the list of buffers
+-- bd <number> will delete a buffer by its number
 
 
 -- makes the current file executable and runs the file
-vim.keymap.set("n", "<leader>x", "<cmd>python %<cr>")
+-- vim.keymap.set("n", "<leader>x", "<cmd>python %<cr>")

@@ -34,24 +34,11 @@ endfunction
 
 nnoremap <c-z> <nop>
 
-function EnterVim()
-    vertical split
-    hor bot split
-    resize 15
-    term "powershell"
-    " let bufnum = bufnr("%")
-    set nobl
-    set nonumber
-    set norelativenumber
-    file term
-endfunction
-
 noremap <silent> <C-=> :call AdjustFontSize(1)<CR><c-w>=
 noremap <silent> <C--> :call AdjustFontSize(-1)<CR><c-w>=
 inoremap <silent> <C-+> <Esc>:call AdjustFontSize(1)<CR><c-w>=a
 inoremap <silent> <C--> <Esc>:call AdjustFontSize(-1)<CR><c-w>=a
 inoremap <silent> <C-0> <Esc>:call SetFontSize(10)<cr><c-w>=a
 nnoremap <silent> <C-0> :call SetFontSize(10)<cr><c-w>=
-au VimEnter * call EnterVim()
-autocmd BufEnter,BufRead,BufNewFile *.lua lua vim.diagnostic.disable()
+" autocmd BufEnter,BufRead,BufNewFile *.lua :bufdo lua vim.diagnostic.disable()<cr>
 ]]

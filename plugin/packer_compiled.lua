@@ -149,20 +149,10 @@ _G.packer_plugins = {
     path = "C:\\Users\\sahww\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\playground",
     url = "https://github.com/nvim-treesitter/playground"
   },
-  ["plenary.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\sahww\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
-    url = "https://github.com/nvim-lua/plenary.nvim"
-  },
   ["rainbow-delimiters.nvim"] = {
     loaded = true,
     path = "C:\\Users\\sahww\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\rainbow-delimiters.nvim",
     url = "https://github.com/hiphish/rainbow-delimiters.nvim"
-  },
-  ["telescope.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\sahww\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
-    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ultisnips = {
     loaded = true,

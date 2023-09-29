@@ -5,10 +5,10 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     use('wbthomason/packer.nvim')
-    use('nvim-tree/nvim-web-devicons')
     use("ellisonleao/gruvbox.nvim" )
-    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
-    use('nvim-treesitter/playground')
+    -- use('nvim-tree/nvim-web-devicons')
+    -- use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
+    -- use('nvim-treesitter/playground')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('tpope/vim-commentary')
@@ -36,9 +36,9 @@ return require('packer').startup(function(use)
             {'L3MON4D3/LuaSnip'},     -- Required
         }
     }
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.2',
-        -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
-    }
+    -- use {
+    --     'nvim-telescope/telescope.nvim', tag = '0.1.2',
+    --     -- or                            , branch = '0.1.x',
+    --     requires = { {'nvim-lua/plenary.nvim'} }
+    -- }
 end)
