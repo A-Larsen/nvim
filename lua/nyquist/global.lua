@@ -32,7 +32,9 @@ function! SetFontSize(amount)
   :execute "GuiFont! Consolas:h" . s:fontsize
 endfunction
 
-nnoremap <c-z> <nop>
+if has("win32")
+    nnoremap <c-z> <nop>
+endif
 
 noremap <silent> <C-=> :call AdjustFontSize(1)<CR><c-w>=
 noremap <silent> <C--> :call AdjustFontSize(-1)<CR><c-w>=

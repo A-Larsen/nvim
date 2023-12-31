@@ -1,5 +1,9 @@
 local lsp = require("lsp-zero")
 
+local windows = require('lspconfig.ui.windows')
+
+windows.default_options.border = 'single'
+
 lsp.preset("recommended")
 
 lsp.ensure_installed({
