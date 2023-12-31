@@ -1,8 +1,15 @@
+-- make sure to edit mason before lsp-zero
+require('mason.settings').set({
+    ui = {
+      border = "double"
+    }
+})
+
 local lsp = require("lsp-zero")
 
 local windows = require('lspconfig.ui.windows')
 
-windows.default_options.border = 'single'
+windows.default_options.border = 'double'
 
 lsp.preset("recommended")
 
