@@ -21,6 +21,7 @@ return require('packer').startup(function(use)
     use('inkarkat/vim-SyntaxRange')
     use('hiphish/rainbow-delimiters.nvim')
     use('junegunn/fzf', { run = ':fzf#install()'} )
+    use('junegunn/fzf.vim')
     use('rhysd/vim-grammarous')
     use {
         'VonHeikemen/lsp-zero.nvim',
