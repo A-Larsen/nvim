@@ -56,11 +56,13 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- buffer
-vim.keymap.set("n", "<c-b>p", "<cmd>bp<cr>") -- buffer previous
-vim.keymap.set("n", "<c-b>n", "<cmd>bn<cr>") -- buffer next
-vim.keymap.set("n", "<c-b>c", "<cmd>%bd|e#<cr>") -- delete all buffers
-vim.keymap.set("n", "<c-b>d", "<cmd>bd<cr>") -- delete current buffer
-vim.keymap.set("n", "<c-b>i", "<cmd>set nobl<cr>") -- don't show this in buffer list
+vim.keymap.set("n", "<leader>bp", "<cmd>bp<cr>") -- buffer previous
+vim.keymap.set("n", "<leader>bn", "<cmd>bn<cr>") -- buffer next
+vim.keymap.set("n", "<leader>bc", "<cmd>%bd|e#<cr>") -- delete all buffers
+vim.keymap.set("n", "<leader>bd", "<cmd>bd<cr>") -- delete current buffer
+vim.keymap.set("n", "<leader>bi", "<cmd>set nobl<cr>") -- don't show this in buffer list
+vim.keymap.set("n", "<leader>bl", "<cmd>ls<cr>") -- list all the buffers
+vim.keymap.set("n", "<leader>bs", ":b ") -- list search for a uffer
 -- doing :b and then tying in a string and then tab will show you a
 -- list of buffers that have the string
 -- ls will show you the list of buffers
