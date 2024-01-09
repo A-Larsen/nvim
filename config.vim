@@ -30,6 +30,12 @@ endfunction
 
 " TermOpen is an event
 autocmd TermOpen * call TerminalSettings()
+autocmd BufRead,BufNewFile *.h set filetype=c
+
+let g:ale_linters = {
+\   'c': ['cc'],
+\   'lua': [],
+\}
 
 function! DeleteInactiveBufs()
     "From tabpagebuflist() help, get a list of all buffers in all tabs
