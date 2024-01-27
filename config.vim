@@ -56,3 +56,5 @@ function! DeleteInactiveBufs()
     endfor
     echomsg nWipeouts . ' buffer(s) wiped out'
 endfunction
+
+set colorcolumn=80
