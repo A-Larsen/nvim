@@ -5,6 +5,21 @@ require('mason.settings').set({
     }
 })
 
+local lspconfig = require("lspconfig")
+
+lspconfig.clangd.setup{
+    cmd = {
+      "clangd",
+      "--background-index",
+      "--clang-tidy",
+      "--header-insertion=iwyu",
+      "--completion-style=detailed",
+      "--function-arg-placeholders",
+      "--fallback-style=llvm",
+      "--header-insertion=never",
+    },
+}
+
 local lsp = require("lsp-zero")
 
 local windows = require('lspconfig.ui.windows')
@@ -16,6 +31,7 @@ lsp.preset("recommended")
 lsp.ensure_installed({
   'tsserver',
   'rust_analyzer',
+  'clangd',
 })
 
 -- Fix Undefined global 'vim'
@@ -48,8 +64,25 @@ lsp.set_preferences({
     }
 })
 
+
+
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
+
+  -- opts.servers = {
+  -- clangd = {
+  --   cmd = {
+  --     "clangd",
+  --     "--background-index",
+  --     "--clang-tidy",
+  --     "--header-insertion=iwyu",
+  --     "--completion-style=detailed",
+  --     "--function-arg-placeholders",
+  --     "--fallback-style=llvm",
+  --     "--header-insertion=never",
+  --   },
+  -- },
+-- }
 
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
   vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
@@ -64,6 +97,7 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
+
 
 vim.diagnostic.config({
     virtual_text = true
