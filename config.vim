@@ -32,6 +32,7 @@ endfunction
 autocmd TermOpen * call TerminalSettings()
 autocmd BufRead,BufNewFile *.h set filetype=c
 autocmd BufRead,BufNewFile *.asm set filetype=nasm
+autocmd BufRead,BufNewFile *.nasm set filetype=nasm
 
 let g:ale_linters = {
 \   'c': ['cc'],
