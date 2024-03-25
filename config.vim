@@ -28,10 +28,15 @@ function! TerminalSettings()
     normal a
 endfunction
 
+function! Nasm()
+    ALEDisableBuffer
+    set filetype=nasm
+endfunction
+
 " TermOpen is an event
 autocmd TermOpen * call TerminalSettings()
 autocmd BufRead,BufNewFile *.h set filetype=c
-autocmd BufRead,BufNewFile *.asm set filetype=nasm
+autocmd BufRead,BufNewFile *.nasm call Nasm()
 
 let g:ale_linters = {
 \   'c': ['cc'],
