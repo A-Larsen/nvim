@@ -31,8 +31,8 @@ endfunction
 " TermOpen is an event
 autocmd TermOpen * call TerminalSettings()
 autocmd BufRead,BufNewFile *.h set filetype=c
-autocmd BufRead,BufNewFile *.asm set filetype=nasm
 autocmd BufRead,BufNewFile *.nasm set filetype=nasm
+autocmd VimEnter * call system("rm -rf ~/.local/state/nvim/swap/*")
 
 let g:ale_linters = {
 \   'c': ['cc'],
