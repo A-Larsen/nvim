@@ -47,8 +47,10 @@ endfunction
 
 function! GitReset()
     echo system("git reset --hard")
-    set undoreload=0
-    edit
+    set noconfirm
+    bufdo! set undoreload=0
+    bufdo! edit!
+    set confirm
 endfunction
 
 
