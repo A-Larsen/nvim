@@ -7,11 +7,18 @@ function! TerminalSettings()
     normal a
 endfunction
 
+function! AdocLinkPaste()
+    exec 'normal "+p'
+    exec 'normal T/vt/"ayA['
+    exec 'normal "ap]'
+endfunction
+
 " TermOpen is an event
 autocmd TermOpen * call TerminalSettings()
 autocmd BufRead,BufNewFile *.h set filetype=c
 autocmd BufRead,BufNewFile *.nasm set filetype=nasm
 autocmd VimEnter * call system("rm -rf ~/.local/state/nvim/swap/*")
+autocmd FileType asciidoctor inoremap <buffer> <c-l> <esc>:call AdocLinkPaste()<cr>
 
 let g:ale_linters = {
 \   'c': ['cc'],
@@ -69,6 +76,7 @@ function! GitReset()
     bufdo! edit!
     set confirm
 endfunction
+
 
 noremap <silent> <C-=> :call AdjustFontSize(1)<CR><c-w>=
 noremap <silent> <C--> :call AdjustFontSize(-1)<CR><c-w>=
