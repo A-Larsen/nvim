@@ -9,7 +9,7 @@ endfunction
 
 function! AdocLinkPaste()
     exec 'normal "+p'
-    exec 'normal T/vt/"ayA['
+    exec 'normal T/vw"ayA['
     exec 'normal "ap]'
 endfunction
 
