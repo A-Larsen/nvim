@@ -6,6 +6,7 @@ vim.opt.incsearch = true
 vim.opt.cursorline = true
 vim.api.nvim_set_hl(0, "CursorColumn", {ctermbg=8})
 vim.api.nvim_set_hl(0, "CursorLine", {ctermbg=8})
+ vim.api.nvim_set_hl(0, "CursorLine", { bg = "#262626" })
 vim.opt.conceallevel = 3
 vim.opt.relativenumber = true
 vim.opt.showtabline = 2
