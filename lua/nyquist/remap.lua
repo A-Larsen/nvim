@@ -48,8 +48,8 @@ vim.keymap.set("n", "<c-o>l", "<cmd>set list!<CR><cmd>set list?<cr>")
 vim.keymap.set("n", "<c-o>h", "<cmd>set hlsearch!<cr><cmd>set hlsearch?<cr>")
 
 -- move a block of code as one
-vim.keymap.set("v", "J", "<cmd>m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", "<cmd>m '<-2<CR>gv=gv")
+-- vim.keymap.set("v", "J", "<cmd>m '>+1<CR>gv=gv")
+-- vim.keymap.set("v", "K", "<cmd>m '<-2<CR>gv=gv")
 
 -- when going through searches, keep cursor in the middle
 vim.keymap.set("n", "n", "nzzzv")

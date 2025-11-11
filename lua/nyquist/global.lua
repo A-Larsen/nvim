@@ -20,6 +20,8 @@ vim.opt.smarttab = true
 vim.opt.wrap = false
 vim.opt.textwidth=80
 vim.opt.termguicolors = true
+vim.opt.winborder = 'bold'
+
 
 vim.cmd[[
 let s:fontsize = 12
