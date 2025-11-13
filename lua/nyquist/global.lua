@@ -21,6 +21,7 @@ vim.opt.wrap = false
 vim.opt.textwidth=80
 vim.opt.termguicolors = true
 vim.opt.winborder = 'bold'
+vim.opt.colorcolumn = '80'
 
 
 vim.cmd[[
