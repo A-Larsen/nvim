@@ -46,6 +46,7 @@ vim.keymap.set("n", "<c-o>s", "<cmd>set smartcase!<CR><cmd>set smartcase?<CR>")
 vim.keymap.set("n", "<c-o>i", "<cmd>set ignorecase!<cr><cmd>set ignorecase?<cr>")
 vim.keymap.set("n", "<c-o>l", "<cmd>set list!<CR><cmd>set list?<cr>")
 vim.keymap.set("n", "<c-o>h", "<cmd>set hlsearch!<cr><cmd>set hlsearch?<cr>")
+vim.keymap.set("i", "<c-e>", "<esc>:read !")
 
 -- move a block of code as one
 -- vim.keymap.set("v", "J", "<cmd>m '>+1<CR>gv=gv")
