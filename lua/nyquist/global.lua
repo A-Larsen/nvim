@@ -25,6 +25,7 @@ vim.opt.colorcolumn = '80'
 
 
 vim.cmd[[
+packadd termdebug
 let s:fontsize = 12
 function! AdjustFontSize(amount)
   let s:fontsize = s:fontsize+a:amount

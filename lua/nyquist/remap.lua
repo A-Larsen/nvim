@@ -15,7 +15,6 @@ vim.keymap.set("v", "s~", "c~<C-r>\"~", {silent = true})
 vim.keymap.set("i", "<c-b>", "<Esc>O")
 vim.keymap.set("i", "<c-f>", "<Esc>A<Enter>")
 vim.keymap.set("i", "<c-v>", "<Esc>A")
-vim.keymap.set("n", "<leader>Dd", "<cmd>call Debug()<CR>")
 
 --tabs
 vim.keymap.set("t", "<c-t>N", "<c-w><cmd>tabnew<CR>")
@@ -24,6 +23,26 @@ vim.keymap.set("t", "<c-t>n", "<c-w><cmd>tabnext<CR>")
 vim.keymap.set("t", "<c-t>p", "<c-w><cmd>tabprev<CR>")
 vim.keymap.set("n", "<c-t>n", "<cmd>tabnext<CR>")
 vim.keymap.set("n", "<c-t>p", "<cmd>tabprev<CR>")
+
+-- help Termdebug
+vim.keymap.set("n", "<leader>dd", ":Debug ")
+vim.keymap.set("n", "<leader>da", ":Arguments ")
+vim.keymap.set("n", "<leader>dr", ":Run<cr>")
+vim.keymap.set("n", "<leader>db", ":Break<cr>")
+vim.keymap.set("n", "<leader>ds", ":Step<cr>")
+vim.keymap.set("n", "<leader>dc", ":Continue<cr>")
+vim.keymap.set("n", "<leader>de", ":Stop<cr>")
+vim.keymap.set("n", "<leader>df", ":Finish<cr>")
+vim.keymap.set("n", "<leader>de", ":Evaluate<cr>")
+vim.keymap.set("n", "<leader>dn", ":Over<cr>") -- the next command
+
+vim.keymap.set("n", "<leader>dC", ":Clear<cr>")
+vim.keymap.set("n", "<leader>dF", ":Frame ")
+vim.keymap.set("n", "<leader>dU", ":Up ")
+vim.keymap.set("n", "<leader>dD", ":Down ")
+vim.keymap.set("n", "<leader>dS", ":Source<cr>")
+vim.keymap.set("n", "<leader>dA", ":Asm<cr>")
+vim.keymap.set("n", "<leader>dV", ":Var<cr>")
 
 -- save the buffer
 vim.keymap.set("n", "<leader>W", "<cmd>w!<CR>")
@@ -59,7 +78,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- buffer
 vim.keymap.set("n", "<leader>bp", "<cmd>bp<cr>") -- buffer previous
 vim.keymap.set("n", "<leader>bn", "<cmd>bn<cr>") -- buffer next
-vim.keymap.set("n", "<leader>bc", "<cmd>%bd|e#<cr>") -- delete all buffers
+vim.keymap.set("n", "<leader>bc", "<cmd>%bd|e#<cr>") -- delete all buffers except the current buffer
 vim.keymap.set("n", "<leader>bd", "<cmd>bd<cr>") -- delete current buffer
 vim.keymap.set("n", "<leader>bi", "<cmd>set nobl<cr>") -- don't show this in buffer list
 vim.keymap.set("n", "<leader>bl", "<cmd>ls<cr>") -- list all the buffers
