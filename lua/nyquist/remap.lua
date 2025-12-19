@@ -60,6 +60,7 @@ vim.keymap.set("v", "<c-c>", "\"+y | call system('xclip -selection clipboard -i'
 -- vim.keymap.set("n", "<leader>rt", ":bel split | set norelativenumber | set nonumber | term runtst %:p:h<CR> | :normal Gi<CR>")
 
 -- quick search and replace
+-- use the dot command in normal mode to replace more matches
 vim.keymap.set("n", "<leader>s", "ye*Ncgn")
 
 -- quick quit window
