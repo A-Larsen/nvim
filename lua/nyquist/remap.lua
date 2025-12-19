@@ -85,7 +85,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- buffer
 vim.keymap.set("n", "<leader>bp", "<cmd>bp<cr>") -- buffer previous
 vim.keymap.set("n", "<leader>bn", "<cmd>bn<cr>") -- buffer next
-vim.keymap.set("n", "<leader>bc", "<cmd>%bd|e#<cr>") -- delete all buffers except the current buffer
+vim.keymap.set("n", "<leader>bc", "<cmd>%bd|e#|bd#<cr>") -- delete all buffers except the current buffer
 vim.keymap.set("n", "<leader>bd", "<cmd>bd<cr>") -- delete current buffer
 vim.keymap.set("n", "<leader>bi", "<cmd>set nobl<cr>") -- don't show this in buffer list
 vim.keymap.set("n", "<leader>bl", "<cmd>ls<cr>") -- list all the buffers
