@@ -37,3 +37,5 @@ endfunction
 command! -nargs=1 Debug call DebugFunc(<q-args>)
 command! -nargs=0 QuickFixOpen NERDTreeClose | silent only
 command! -nargs=* MatchFiles call MatchFilesFunc(<f-args>)
+
+autocmd VimEnter * :bel terminal
