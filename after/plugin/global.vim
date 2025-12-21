@@ -34,8 +34,13 @@ function! ToggleQuickfix()
     endif
 endfunction
 
+function TerminalOpen()
+    bel terminal
+    resize 12
+endfunction
+
 command! -nargs=1 Debug call DebugFunc(<q-args>)
 command! -nargs=0 QuickFixOpen NERDTreeClose | silent only
 command! -nargs=* MatchFiles call MatchFilesFunc(<f-args>)
 
-autocmd VimEnter * :bel terminal
+autocmd VimEnter * call TerminalOpen()
