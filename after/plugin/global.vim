@@ -37,6 +37,7 @@ endfunction
 function TerminalOpen()
     bel terminal
     resize 12
+    set nobl
 endfunction
 
 command! -nargs=1 Debug call DebugFunc(<q-args>)
