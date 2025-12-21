@@ -24,6 +24,8 @@ vim.keymap.set("t", "<c-t>p", "<c-w><cmd>tabprev<CR>")
 vim.keymap.set("n", "<c-t>n", "<cmd>tabnext<CR>")
 vim.keymap.set("n", "<c-t>p", "<cmd>tabprev<CR>")
 
+vim.keymap.set("n", "<leader>tt", ":TermOpen<cr>")
+
 -- quickfix
 vim.keymap.set("n", "<leader>cc", ":MatchFiles ")
 vim.keymap.set("n", "<leader>co", ":call ToggleQuickfix()<cr>")
