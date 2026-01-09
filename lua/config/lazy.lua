@@ -44,11 +44,21 @@ require("lazy").setup({
     {'rhysd/vim-grammarous'},
     {'neovim/nvim-lspconfig'},
     {'folke/lazydev.nvim'},
+    -- {'pangloss/vim-javascript'},
+    -- {
+    --   'esmuellert/nvim-eslint',
+    --   config = function()
+    --     require('nvim-eslint').setup({})
+    --   end,
+    -- },
     {"ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
     {
         "mason-org/mason.nvim",
         opts = {}
     },
+  },
+  ui = {
+    border = "single",  -- ✅ adds a border around Lazy TUI window
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
